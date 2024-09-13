@@ -12,8 +12,7 @@ async function handleFileRequest(message, sender, sendResponse) {
     body: JSON.stringify({ prompt, html })
   });
 
-  const fileURL = fileURLPromise.json();
-
+  const fileURL = await fileURLPromise.json();
   chrome.runtime.sendMessage({ action: 'download', fileURL });
 }
 
