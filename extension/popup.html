@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="scripts/popup.js" defer></script>
+  <title>ScrAIper</title>
+</head>
+
+<body>
+  <form>
+    <label for="prompt" class="prompt-label">
+      Describe the content you want to scrape on the current page?
+    </label>
+    <textarea name="prompt" id="prompt" placeholder="Prompt" autofocus></textarea>
+    <small>
+      Prompt required!
+    </small>
+
+    <p>File Format:</p>
+    <div class="radio-container">
+      <div>
+        <input type="radio" name="file-type" id="pdf" value="pdf" checked>
+        <label for="pdf" class="radio-label">PDF</label>
+      </div>
+
+      <div>
+        <input type="radio" name="file-type" id="csv" value="csv">
+        <label for="csv" class="radio-label">CSV</label>
+      </div>
+
+      <div>
+        <input type="radio" name="file-type" id="json" value="json">
+        <label for="json" class="radio-label">JSON</label>
+      </div>
+    </div>
+
+    <button type="submit">Create File</button>
+  </form>
+</body>
+
+</html>
